@@ -38,18 +38,18 @@ def jacobi(A, b, x_start, epsilon=1e-10, max_iterations=500):
 # Test the function using data from Wikipedia
 # This example converges in 69 iterations.
 # problem data
-A = np.array([
-    [5, 2, 1, 1],
-    [2, 6, 2, 1],
-    [1, 2, 7, 1],
-    [1, 1, 2, 8]
-])
-b = np.array([29, 31, 26, 19])
+# A = np.array([
+#     [5, 2, 1, 1],
+#     [2, 6, 2, 1],
+#     [1, 2, 7, 1],
+#     [1, 1, 2, 8]
+# ])
+# b = np.array([29, 31, 26, 19])
 
-# you can choose any starting vector
-x_start = np.zeros(len(b))
-x = jacobi(A, b, x_start)
+# # you can choose any starting vector
+# x_start = np.zeros(len(b))
+# x = jacobi(A, b, x_start)
 
-print("x:", x)
-print("computed b:", np.dot(A, x))
-print("real b:", b)
+# print("x:", x)
+# print("computed b:", np.dot(A, x))
+# print("real b:", b)

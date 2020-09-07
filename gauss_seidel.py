@@ -39,18 +39,18 @@ def gauss_seidel(A, b, x_start, epsilon=1e-10, max_iterations=500):
 
 # Testing using the Jacobi example from Wikipedia.
 # This example converges in 14 iterations compared to the 69 iterations taken in the Jacobi method.
-A = np.array([
-    [5, 2, 1, 1],
-    [2, 6, 2, 1],
-    [1, 2, 7, 1],
-    [1, 1, 2, 8]
-])
-b = np.array([29, 31, 26, 19])
-# you can choose any starting vector
-x = np.zeros(len(b))
+# A = np.array([
+#     [5, 2, 1, 1],
+#     [2, 6, 2, 1],
+#     [1, 2, 7, 1],
+#     [1, 1, 2, 8]
+# ])
+# b = np.array([29, 31, 26, 19])
+# # you can choose any starting vector
+# x = np.zeros(len(b))
 
-x_result = gauss_seidel(A, b, x_start=x)
+# x_result = gauss_seidel(A, b, x_start=x)
 
-print('The result of gauss_seidel is: ' + 'x=' + str(x_result))
-print('The computed b is: ' + str(np.dot(A, x_result)))
-print('The real b is: ' + str(b))
+# print('The result of gauss_seidel is: ' + 'x=' + str(x_result))
+# print('The computed b is: ' + str(np.dot(A, x_result)))
+# print('The real b is: ' + str(b))
