@@ -10,20 +10,23 @@ def jacobi(A, b, x_start, epsilon=1e-10, max_iterations=500):
       Numpy array containing the numbers in the coefficient matrix.
   b : vector
       Vector containing the numbers on the right-hand side of Ax=b.
+  x_start : vector
+            A starting guess of the solution vector x.
+  epsilon : number
+            The tolerance used to determine convergence, Cauchy style.
+  max_iterations : number
+                   Maximum number of iterations to complete.
   returns : vector
             Function returns a solution vector x.
   """
   # select out diagonal elements of A
   D = np.eye(A.shape[0], A.shape[1])
   D = D * A.diagonal()
-  # Find D^{-1}
   D_inv = np.diag(1 / np.diag(D))
-
   M = A - D
   x = x_start
   for i in range(max_iterations):
     x_next = np.dot(D_inv, b - np.dot(M, x))
-    print(x_next)
 
     if np.linalg.norm(x - x_next) < epsilon:
       return x
@@ -31,7 +34,9 @@ def jacobi(A, b, x_start, epsilon=1e-10, max_iterations=500):
 
   return x
 
+
 # Test the function using data from Wikipedia
+# This example converges in 69 iterations.
 # problem data
 A = np.array([
     [5, 2, 1, 1],
